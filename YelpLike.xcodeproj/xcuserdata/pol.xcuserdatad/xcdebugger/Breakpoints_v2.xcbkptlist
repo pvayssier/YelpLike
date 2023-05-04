@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "921F65EE-5601-47CB-A9FB-84FB370E2A44"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC2696B6-5E15-421C-B31A-78C3B2AC5CF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Home/DataSource/HomeCollectionViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "applySnapchotIfNeeded(animated:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEC4A161-3CBB-47E0-9DDF-096B1B2562EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Core/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AEC4A161-3CBB-47E0-9DDF-096B1B2562EC - ae6a3084e7131e89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YelpLike.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Core/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "AEC4A161-3CBB-47E0-9DDF-096B1B2562EC - ae6a3084e7131e89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YelpLike.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Core/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD2DF926-2756-496C-A823-F06D4A9A5ED9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Service/DatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "checkIfConnect()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD2DF926-2756-496C-A823-F06D4A9A5ED9 - f19241aab00e5e3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "BD2DF926-2756-496C-A823-F06D4A9A5ED9 - 44eb36e448075375"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; Swift.Bool in YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "BD2DF926-2756-496C-A823-F06D4A9A5ED9 - f19241aab00e5e3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "BD2DF926-2756-496C-A823-F06D4A9A5ED9 - c31ee0addb85ab8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for YelpLike.DatabaseService.checkIfConnect() async -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "BD2DF926-2756-496C-A823-F06D4A9A5ED9 - c31ee0addb85ab8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for YelpLike.DatabaseService.checkIfConnect() async -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2F681BB-B39C-4972-A48B-07CEE8F01182"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Service/DatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "checkIfConnect()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43C956D3-F508-49E1-BEEB-622B3EB56926"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Service/DatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "checkIfConnect()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "43C956D3-F508-49E1-BEEB-622B3EB56926 - 77b0d50abd8f6a50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "43C956D3-F508-49E1-BEEB-622B3EB56926 - 2c9638c0b576f02d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRQueryDocumentSnapshot) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "43C956D3-F508-49E1-BEEB-622B3EB56926 - 77b0d50abd8f6a50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "43C956D3-F508-49E1-BEEB-622B3EB56926 - 2c9638c0b576f02d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRQueryDocumentSnapshot) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "43C956D3-F508-49E1-BEEB-622B3EB56926 - 2c9638c0b576f1ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRQueryDocumentSnapshot) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "43C956D3-F508-49E1-BEEB-622B3EB56926 - a8ca4aafbd097fcc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRQueryDocumentSnapshot) -&gt; Swift.String in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49027C92-4C43-4873-8E21-D747223702A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Service/DatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "checkIfConnect()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "49027C92-4C43-4873-8E21-D747223702A3 - c31ee0addb85ac68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for YelpLike.DatabaseService.checkIfConnect() async -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "664">
+               </Location>
+               <Location
+                  uuid = "49027C92-4C43-4873-8E21-D747223702A3 - c31ee0addb85ac68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for YelpLike.DatabaseService.checkIfConnect() async -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "720">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E88CE7EB-2836-4EF3-9B55-C8BBAA5B72BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Service/DatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "checkIfConnect()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F2655EC-C252-4E04-BDB2-3F468EB4D0C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YelpLike/Service/DatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "checkIfConnect()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2F2655EC-C252-4E04-BDB2-3F468EB4D0C2 - 2e66dfb0e7273c04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() async -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1056">
+               </Location>
+               <Location
+                  uuid = "2F2655EC-C252-4E04-BDB2-3F468EB4D0C2 - 2e66dfb0e7273c04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in YelpLike.DatabaseService.checkIfConnect() async -&gt; Swift.Bool"
+                  moduleName = "YelpLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pol/Documents/YelpLike/YelpLike/Service/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>505579915471-k0k6sged8c11q3t6i8iftkckd2tihs76.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.505579915471-k0k6sged8c11q3t6i8iftkckd2tihs76</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAbjIxCYBoYWAvuuDz-b_ECwSyCh_OPx9o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>505579915471</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.paulvayssier.YelpLike</string>
+	<key>PROJECT_ID</key>
+	<string>foodcheck-df74d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>foodcheck-df74d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:505579915471:ios:1a21e4d1971b330ba10fba</string>
+	<key>DATABASE_URL</key>
+	<string>https://foodcheck-df74d-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
