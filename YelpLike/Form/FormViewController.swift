@@ -215,7 +215,7 @@ extension FormViewController {
         var itemContent: String? {
             switch kind {
             case .addPlace:
-                return (getCell(formItem: .content) as? FormTextInputCell)?.getInputText()
+                return (getCell(formItem: .content) as? FormLargeTextInputCell)?.getInputText()
             case .addReview:
                 return (getCell(formItem: .content) as? FormLargeTextInputCell)?.getInputText()
             }
@@ -237,27 +237,60 @@ extension FormViewController {
                 cookStyle: cookStyle,
                 description: itemContent ?? "",
                 isFavorite: isFavItem ?? false,
-                imagePath: selectedPicturesIdentifiers.first ?? "daily-d"
+                imagePaths: selectedPicturesIdentifiers
             )
-
+            DatabaseService.shared.addPlace(place: place) { Error in
+                if let error = Error {
+                    debugPrint(error.localizedDescription)
+                }
+            }
             Place.all.append(place)
+            dismiss(animated: true)
+            onDismiss?()
         case .addReview:
-            let review = Review(
-                placeId: getPlace(from: placeName)?.id ?? Place.all[0].id,
-                title: itemTitle ?? "",
-                content: itemContent ?? "",
-                imagePaths: selectedPicturesIdentifiers,
-                rate: rate
-            )
-            Review.all.append(review)
+            if let user_id = DatabaseService.shared.userInfo["user_id"] {
+                print(user_id)
+                let review = Review(
+                    placeId: getPlace(from: placeName)?.id ?? Place.all[0].id,
+                    title: itemTitle ?? "",
+                    content: itemContent ?? "",
+                    imagePaths: selectedPicturesIdentifiers,
+                    rate: rate,
+                    name: placeName!
+                )
+                DatabaseService.shared.addReview(review: review) { error in
+                    if let error {
+                        debugPrint(error.localizedDescription)
+                    }
+                }
+                Review.all.append(review)
+                dismiss(animated: true)
+                onDismiss?()
+            } else {
+                showAlert()
+            }
         }
-
-        dismiss(animated: true)
-        onDismiss?()
     }
 
     private func getPlace(from name: String?) -> Place? {
         guard let name else { return nil }
         return Place.all.first(where: { $0.name == name })
+    }
+
+    private func showAlert() {
+        let alertController = UIAlertController(
+            title: "Not connect",
+            message: "Please connect you and try again.",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "Try Again", style: .default) { [weak self] _ in
+            self?.dismiss(animated: true)
+            self?.onDismiss?()
+
+            let viewController = LoginViewController(nibName: nil, bundle: nil)
+            let navigationController = UINavigationController(rootViewController: viewController)
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
     }
 }

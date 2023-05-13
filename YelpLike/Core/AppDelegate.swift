@@ -12,13 +12,47 @@ import FirebaseCore
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  var window: UIWindow?
+    var window: UIWindow?
 
-  func application(_ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    FirebaseApp.configure()
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+
+        // UserDefaults for session cookie
+        let userDefaults = UserDefaults.standard
+
+        
+
+        if let sessionId = userDefaults.string(forKey: "sessionUUID") {
+            DatabaseService.shared.checkIfConnect(for: sessionId)
+            DatabaseService.shared.session = sessionId
+        } else {
+            DatabaseService.shared.checkIfConnect(for: "")
+            DatabaseService.shared.session = "Empty"
+        }
+
+        // Fetch data from Firebase
+
+        DatabaseService.shared.getAllDocuments(of: "Restaurant") { places, _ in
+            if let places {
+                for place in places {
+                    Place.all.append(place)
+                }
+            }
+            DatabaseService.shared.isLoading = false
+        }
+
+        DatabaseService.shared.getAllDocuments(of: "Review") { _, reviews in
+            if let reviews {
+                for review in reviews {
+                    Review.all.append(review)
+                }
+            }
+            DatabaseService.shared.isLoading = false
+        }
+
+        return true
+    }
 
     // MARK: UISceneSession Lifecycle
 

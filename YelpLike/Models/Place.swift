@@ -15,14 +15,14 @@ class Place: Identifiable {
         description: String,
         isFavorite: Bool = false,
         coordinates: String? = nil,
-        imagePath: String
+        imagePaths: [String]
     ) {
         self.name = name
         self.cookStyle = cookStyle
         self.description = description
         self.isFavorite = isFavorite
         self.coordinates = coordinates
-        self.imagePath = imagePath
+        self.imagePaths = imagePaths
     }
 
     let id = UUID()
@@ -33,45 +33,12 @@ class Place: Identifiable {
     var isFavorite: Bool = false
 
     var coordinates: String?
-    var imagePath: String
+    var imagePaths: [String]
 
-    static var all: [Place] = getDefaultData() {
-        didSet {
-            debugPrint("All Places: ", all)
-        }
-    }
+    static var all: [Place] = []
 
     var numberOfReviews: Int {
         Review.all.filter({ $0.placeId == id }).count
-    }
-
-    private static func getDefaultData() -> [Place] {
-        [
-            .init(
-                name: "Tutiac, Le Bistro des Vignerons",
-                cookStyle: .french,
-                description: "Notre jeune chef s’inspire des classiques de la gastronomie du Sud-ouest et y apporte sa créativité. Ici on défend le goût et les producteurs de nos régions.",
-                imagePath: "tutiac"
-            ),
-            .init(
-                name: "Maison Nouvelle",
-                cookStyle: .fineDining,
-                description: "Bienvenue chez Etxe Beste (maison nouvelle en basque) !",
-                imagePath: "maison-nouvelle"
-            ),
-            .init(
-                name: "Le Quatrieme Mur",
-                cookStyle: .fineDining,
-                description: "Installé dans le Grand Théâtre de Bordeaux, ce restaurant sert une cuisine de saison raffinée dans un cadre élégant et lumineux.",
-                imagePath: "quatrieme-mur"
-            ),
-            .init(
-                name: "Daily-D",
-                cookStyle: .fastfood,
-                description: "Sandwicherie préférée de Yannick Nay",
-                imagePath: "daily-d"
-            )
-        ]
     }
 
 }

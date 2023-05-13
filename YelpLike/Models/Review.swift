@@ -16,18 +16,7 @@ struct Review: Identifiable {
 
     var rate: Int
 
-    static var all: [Self] = getDefaultData() {
-        didSet {
-            debugPrint("All Reviews", all)
-        }
-    }
+    var name: String
 
-    private static func getDefaultData() -> [Self] {
-        [
-            .init(placeId: UUID(), title: "Delicious", content: "Very Good", imagePaths: [], rate: 3),
-            .init(placeId: UUID(), title: "Bad", content: "Very Bad", imagePaths: [], rate: 3),
-            .init(placeId: UUID(), title: "Terrible", content: "It was terrible", imagePaths: [], rate: 3),
-            .init(placeId: UUID(), title: "Wonderful", content: "Incredible, Wonderful", imagePaths: [], rate: 3)
-        ]
-    }
+    static var all: [Self] = []
 }

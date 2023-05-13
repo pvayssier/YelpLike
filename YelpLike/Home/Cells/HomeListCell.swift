@@ -59,10 +59,16 @@ final class HomeListCell: UICollectionViewListCell {
 
     func configure(with item: HomeItem) {
         imagePath = item.imagePath
-        config.image = UIImage(named: item.imagePath ?? "") ?? ImageManager.shared.defaultImage
         config.text = item.title
         config.secondaryText = item.subtitle
-        contentConfiguration = config
+        if let imageString = item.imagePath, let image = UIImage(named: imageString) {
+            config.image = image
+            contentConfiguration = config
+        } else {
+            let image = ImageManager.shared.defaultImage
+            config.image = image
+            contentConfiguration = config
+        }
     }
 
     

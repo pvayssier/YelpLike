@@ -44,7 +44,6 @@ final class ImageManager {
             options: imageRequestOptions,
             resultHandler: { [weak self] generatedImage, infoKeys in
                 guard let self else { return }
-                print(generatedImage)
                 resultHandler(generatedImage ?? self.defaultImage)
             }
         )

@@ -116,7 +116,12 @@ final class HomeGridCell: UICollectionViewCell {
         imagePath = item.imagePath
         titleLabel.text = item.title
         secondaryLabel.text = item.subtitle
-        imageView.image = UIImage(named: item.imagePath ?? "") ?? ImageManager.shared.defaultImage
+        guard let image = item.imagePath else {
+            let image = ImageManager.shared.defaultImage
+            imageView.image = image
+            return
+        }
+        imageView.image = UIImage(named: image)
     }
 }
 

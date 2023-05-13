@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class HomeViewController: UICollectionViewController {
 
@@ -20,28 +21,119 @@ final class HomeViewController: UICollectionViewController {
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
-        Task {
-            await checkIfConnect()
-        }
+        setupObservers()
         super.viewDidLoad()
         configureUI()
-    }
 
-    private func checkIfConnect() async {
-        let isConnect = await DatabaseService.shared.checkIfConnect()
-        if !isConnect {
-            present(LoginViewController(nibName: nil, bundle: nil), animated: true)
-        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         emptyStateView.isHidden = !(dataSource.lastPlaces.isEmpty && dataSource.lastReviews.isEmpty)
+        dataSource.applySnapchotIfNeeded()
+//        if let _ = DatabaseService.shared.userInfo["user_id"] {
+//        } else {
+//            let viewController = LoginViewController(nibName: nil, bundle: nil)
+//            let navigationController = UINavigationController(rootViewController: viewController)
+//            self.present(navigationController, animated: true)
+//        }
+    }
 
+    // MARK: - Combine
+
+    private var subscriptions = Set<AnyCancellable>()
+
+    private func setupObservers() {
+        DatabaseService.shared.$didHaveNetwork.sink { [weak self] didHaveNetwork in
+            if !didHaveNetwork {
+                self?.showAlert()
+            }
+        }.store(in: &subscriptions)
+
+
+        DatabaseService.shared.$isConnect.sink { [weak self] val in
+            let viewController = LoginViewController(nibName: nil, bundle: nil)
+            let navigationController = UINavigationController(rootViewController: viewController)
+            guard let self else { return }
+            if !val && DatabaseService.shared.session != UserDefaults.standard.string(forKey: "sessionUUID") {
+                self.present(navigationController, animated: true)
+            } else {
+                self.dismiss(animated: true)
+            }
+        }.store(in: &subscriptions)
+
+        DatabaseService.shared.$isLoading.sink { [weak self] isLoading in
+            isLoading ? self?.showLoadingView() : self?.hideLoadingView()
+        }.store(in: &subscriptions)
+    }
+
+    // MARK: - Loader view
+
+    private var loaderView: UIView?
+
+    private func showLoadingView() {
+        let loaderView = UIView(frame: UIScreen.main.bounds)
+        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        activityIndicator.center = loaderView.center
+        loaderView.addSubview(activityIndicator)
+        let tabBarHeight = tabBarController!.tabBar.frame.size.height
+        view.addSubview(loaderView)
+        loaderView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: tabBarController!.view.frame.width,
+            height: tabBarController!.view.frame.height - tabBarHeight)
+        NSLayoutConstraint.activate([
+            loaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loaderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            loaderView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -tabBarHeight)
+            
+        ])
+        loaderView.backgroundColor = collectionView.backgroundColor
+        activityIndicator.startAnimating()
+        self.loaderView = loaderView
+    }
+
+    private func hideLoadingView() {
+        loaderView?.isHidden = true
+        configureUI()
+        emptyStateView.isHidden = !(dataSource.lastPlaces.isEmpty && dataSource.lastReviews.isEmpty)
         dataSource.applySnapchotIfNeeded()
     }
 
     // MARK: - Private Properties
+
+    private func showAlert() {
+        let alertController = UIAlertController(
+            title: "No Internet Connection",
+            message: "Please check your internet connection and try again.",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "Try Again", style: .default) { [weak self] _ in
+            DatabaseService.shared.hasInternetConnection()
+            self?.didTapTryAgainButton()
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+
+    @objc private func didTapTryAgainButton() {
+        if DatabaseService.shared.didHaveNetwork {
+            self.configureUI()
+            DatabaseService.shared.$isConnect.sink { [weak self] val in
+                let viewController = LoginViewController(nibName: nil, bundle: nil)
+                let navigationController = UINavigationController(rootViewController: viewController)
+                guard let self else { return }
+                if !val && DatabaseService.shared.session != "" {
+                    self.present(navigationController, animated: true)
+                } else {
+                    self.dismiss(animated: true)
+                }
+            }.store(in: &subscriptions)
+        }
+
+    }
 
     private lazy var dismissAction: () -> Void = { [weak self] in
         self?.dataSource.applySnapchotIfNeeded(animated: true)
@@ -57,7 +149,6 @@ final class HomeViewController: UICollectionViewController {
         imageSystemName: "plus.square.dashed",
         text: "Start by adding a place, then add reviews"
     ).makeHostingController().view
-
 
     private lazy var dataSource: DataSource = {
         return DataSource(collectionView: collectionView) { [weak self] (
@@ -126,9 +217,26 @@ final class HomeViewController: UICollectionViewController {
             menu: contextMenu
         )
 
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "person.fill"),
+            style: .done,
+            target: self,
+            action: #selector(didUserButtonClicked(sender:)))
+
         configureCollectionView()
 
         dataSource.applySnapchotIfNeeded()
+    }
+
+    @objc private func didUserButtonClicked(sender: UIBarButtonItem) {
+        UserDefaults.standard.removeObject(forKey: "sessionUUID")
+        DatabaseService.shared.session = "Empty"
+        DatabaseService.shared.isConnect = false
+//        if let user_id = DatabaseService.shared.userInfo["user_id"] {
+//            self.present(UserInfoViewController(nibName: nil, bundle: nil), animated: true)
+//        } else {
+//            self.present(LoginViewController(nibName: nil, bundle: nil), animated: true)
+//        }
     }
 
     private func configureCollectionView() {
@@ -158,4 +266,3 @@ final class HomeViewController: UICollectionViewController {
     }
 
 }
-

@@ -54,10 +54,10 @@ final class HomeCollectionViewDataSource: UICollectionViewDiffableDataSource<Hom
         if !lastPlaces.isEmpty {
             snapshot.appendItems(
                 lastPlaces.map{
-                    HomeItem(
+                    return HomeItem(
                         title: $0.name,
                         subtitle: "\($0.numberOfReviews) reviews",
-                        imagePath: $0.imagePath
+                        imagePath: $0.imagePaths.first
                     )
                 },
                 toSection: .list

@@ -87,7 +87,7 @@ final class FavoritesViewController: UITableViewController {
         }
 
         let item = viewModel.favItems[indexPath.row]
-        cell.configure(title: item.name, image: UIImage(named: item.imagePath))
+        cell.configure(title: item.name, image: UIImage(named: item.imagePaths.first ?? ""))
 
         return cell
     }

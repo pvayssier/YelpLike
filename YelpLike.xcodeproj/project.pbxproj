@@ -50,6 +50,7 @@
 		E222BA7D2A0265E3003DB50C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222BA7C2A0265E3003DB50C /* LoginViewController.swift */; };
 		E22758B12A010FC300505B4F /* FormRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22758B02A010FC300505B4F /* FormRateCell.swift */; };
 		E22758B32A010FDC00505B4F /* RateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22758B22A010FDC00505B4F /* RateButton.swift */; };
+		E25EF5D22A0E617A001BA210 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EF5D12A0E617A001BA210 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		E222BA7E2A02C933003DB50C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E22758B02A010FC300505B4F /* FormRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRateCell.swift; sourceTree = "<group>"; };
 		E22758B22A010FDC00505B4F /* RateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButton.swift; sourceTree = "<group>"; };
+		E25EF5D12A0E617A001BA210 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,8 @@
 		DC207930297740CD00FABE95 /* YelpLike */ = {
 			isa = PBXGroup;
 			children = (
-				E222BA7B2A0265C0003DB50C /* login */,
+				E25EF5D02A0E615E001BA210 /* UserInfo */,
+				E222BA7B2A0265C0003DB50C /* Login */,
 				E222BA652A0242C2003DB50C /* Service */,
 				DC69A0032986CF5A0058BDB8 /* Common */,
 				DC699FFE2986B7540058BDB8 /* Managers */,
@@ -301,12 +304,20 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		E222BA7B2A0265C0003DB50C /* login */ = {
+		E222BA7B2A0265C0003DB50C /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				E222BA7C2A0265E3003DB50C /* LoginViewController.swift */,
 			);
-			path = login;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E25EF5D02A0E615E001BA210 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E25EF5D12A0E617A001BA210 /* UserInfoViewController.swift */,
+			);
+			path = UserInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCABA072298AC0E9006AA628 /* FavoritesViewModel.swift in Sources */,
+				E25EF5D22A0E617A001BA210 /* UserInfoViewController.swift in Sources */,
 				E22758B32A010FDC00505B4F /* RateButton.swift in Sources */,
 				DC20797A297DC61F00FABE95 /* HomeCollectionViewCompositionalLayout.swift in Sources */,
 				DC20796E297C45E500FABE95 /* FormAddButtonCell.swift in Sources */,

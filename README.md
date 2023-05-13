@@ -13,3 +13,16 @@ L'API et la BDD est fait avec Firebase.
 ## - Application
 
 Elle sera faite en Swift avec UIKit. Elle sera faite pour IOS 14.0 et supérieur. Elle sera faite avec une architecture MVVM.
+
+
+## Installation
+
+### Firebase
+
+Créez un projet sur Firebase, suivez toutes les instructions qu'ils donnent par rapport à une application iOS. Téléchargez le fichier `GoogleService-Info.plist` et mettez le dans votre projet avec le fichier `info.plist`. Créez une base de donnée Firestore, créez à l'intérieur les colletions suivantes: `Users`, `Review`, `Restaurant`, `Favorites`.
+
+### Application
+
+Ouvrez le projet avec XCode, allez dans la configuration de la Target `YelpLike` et changez dans la section `Singning & Capabilities` votre Team et votre `Bundle Identifier`.
+
+Vous n'avez plus qu'à lancez l'application 😊
