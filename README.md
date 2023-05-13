@@ -15,7 +15,7 @@ L'API et la BDD est fait avec Firebase.
 Elle sera faite en Swift avec UIKit. Elle sera faite pour IOS 14.0 et supérieur. Elle sera faite avec une architecture MVVM.
 
 
-## Installation
+## - Installation
 
 ### Firebase
 
